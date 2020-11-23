@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Find in Table",
+	"default_locale": "en",
+    "version": "0.0.1",
+    "description": "Very specific app for a specific website. It marks the usernames equal to the emails. Made for some coworkers.",
+	"icons": {
+		"48": "search.png",
+	},
+	"author": "Gummie",
+	"homepage_url": "https://github.com/likefurnis/find-in-table",
+	"offline_enabled": true,
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+		{
+		 "matches": ["https://*/*","http://*/*"],
+		 "js": ["inject.js"]
+		}
+	],
+  }
