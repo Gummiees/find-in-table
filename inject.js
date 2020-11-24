@@ -1,6 +1,7 @@
 (function() {    
     window.onload = function(){
-        var table = document.getElementById("table_575");
+        // var table = document.getElements("table_575");
+        var table =  document.querySelectorAll('table.tablesorter')[0];
         var tableHeaders = table.getElementsByTagName("th");
 
         var numUserName;
