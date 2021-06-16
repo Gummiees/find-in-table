@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Find in Table",
-  "version": "0.1.1",
-  "description": "Very specific app for a specific person.",
+  "name": "Elevator music when idle",
+  "version": "0.1",
+  "description": "Plays elevator music when the user is idle for 5 minutes. Configurable with the popup.",
   "author": "Gummiees",
   "homepage_url": "https://github.com/likefurnis/find-in-table",
   "offline_enabled": true,
@@ -13,5 +13,6 @@
   "permissions": ["idle", "storage"],
   "browser_action": {
     "default_popup": "src/popup/popup.html"
-  }
+  },
+  "icons": { "16": "assets/icons/16.png", "48": "assets/icons/48.png", "128": "assets/icons/128.png" }
 }

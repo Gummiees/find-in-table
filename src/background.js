@@ -16,7 +16,7 @@ function handleMessage(playAudio) {
 }
 
 function idleListener() {
-  chrome.idle.setDetectionInterval(15);
+  chrome.idle.setDetectionInterval(60 * 5);
   chrome.idle.onStateChanged.addListener((state) => {
     if (state === 'idle' && play) {
       audio.play();
