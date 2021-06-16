@@ -1,16 +1,17 @@
 {
-    "manifest_version": 2,
-    "name": "Find in Table",
-    "version": "0.0.1",
-    "description": "Very specific app for a specific website. It marks the usernames equal to the emails. Made for some coworkers.",
-	"author": "Gummie",
-	"homepage_url": "https://github.com/likefurnis/find-in-table",
-	"offline_enabled": true,
-    "permissions": [
-        "http://eveesp.ccp.ad.local:50001/*"
-    ],
-    "content_scripts": [{
-		"matches": ["https://*/*","http://*/*"],
-		"js": ["inject.js"]
-	}]
+  "manifest_version": 2,
+  "name": "Find in Table",
+  "version": "0.1.1",
+  "description": "Very specific app for a specific person.",
+  "author": "Gummiees",
+  "homepage_url": "https://github.com/likefurnis/find-in-table",
+  "offline_enabled": true,
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": false
+  },
+  "permissions": ["idle", "storage"],
+  "browser_action": {
+    "default_popup": "src/popup/popup.html"
+  }
 }
