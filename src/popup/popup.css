@@ -1,0 +1,10 @@
+body {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#errorMessage {
+    color: red;
+}

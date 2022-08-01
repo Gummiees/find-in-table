@@ -1,16 +1,22 @@
 {
-    "manifest_version": 2,
-    "name": "Find in Table",
-    "version": "0.0.1",
-    "description": "Very specific app for a specific website. It marks the usernames equal to the emails. Made for some coworkers.",
-	"author": "Gummie",
-	"homepage_url": "https://github.com/likefurnis/find-in-table",
-	"offline_enabled": true,
-    "permissions": [
-        "http://eveesp.ccp.ad.local:50001/*"
-    ],
-    "content_scripts": [{
-		"matches": ["https://*/*","http://*/*"],
-		"js": ["inject.js"]
-	}]
+  "manifest_version": 3,
+  "name": "Mindset patient auto-filler",
+  "version": "0.1",
+  "description": "Auto-fills the form to enroll a new patient on Mindset.",
+  "author": "Gummiees",
+  "homepage_url": "https://github.com/likefurnis/find-in-table",
+  "offline_enabled": true,
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://*/*","http://*/*"],
+    "js": ["src/inject.js"]
+  }],
+  "host_permissions": ["*://*.koahealth.com/*"],
+  "externally_connectable": {
+    "matches": ["*://*.koahealth.com/*"]
+  },
+  "permissions": ["storage"],
+  "icons": { "16": "assets/icons/16.png", "48": "assets/icons/48.png", "128": "assets/icons/128.png" }
 }
